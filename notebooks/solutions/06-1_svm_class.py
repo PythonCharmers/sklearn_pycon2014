@@ -13,4 +13,4 @@ clf.fit(Xtrain, ytrain)
 ypred = clf.predict(Xtest)
 
 # Now that this is finished, we'll compute the classification rate
-print "accuracy:", np.sum(ytest == ypred) * 1. / len(ytest)
+print("accuracy:", np.sum(ytest == ypred) * 1. / len(ytest))
