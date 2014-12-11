@@ -1,4 +1,4 @@
-# PyCon 2014 Scikit-learn Tutorial
+# Adapted from the PyCon 2014 Scikit-learn Tutorial for Py2/3 compatibility
 
 *Instructor: Jake VanderPlas*
 
