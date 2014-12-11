@@ -14,6 +14,11 @@ If all examples are from the same class, it uses a one-class SVM.
 
 """
 from __future__ import division, print_function
+try:
+    from builtins import range
+except ImportError:
+    # Assume it's Python 2 without the ``future`` package
+    range = xrange
 
 print(__doc__)
 
@@ -29,7 +34,10 @@ from matplotlib.backends.backend_tkagg import NavigationToolbar2TkAgg
 from matplotlib.figure import Figure
 from matplotlib.contour import ContourSet
 
-import Tkinter as Tk
+try:
+    import tkinter as Tk
+except ImportError:
+    import Tkinter as Tk
 import sys
 import numpy as np
 
@@ -194,7 +202,7 @@ class View(object):
 
     def update(self, event, model):
         if event == "examples_loaded":
-            for i in xrange(len(model.data)):
+            for i in range(len(model.data)):
                 self.update_example(model, i)
 
         if event == "example_added":

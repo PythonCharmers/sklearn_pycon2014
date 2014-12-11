@@ -1,6 +1,11 @@
 """
 Small helpers for code that is not shown in the notebooks
 """
+try:
+    from builtins import range
+except ImportError:
+    # Assume it's Python 2 without the ``future`` package
+    range = xrange
 
 from sklearn import neighbors, datasets, linear_model
 import pylab as pl
